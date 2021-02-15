@@ -7,14 +7,27 @@ var displayMsg1 = document.getElementById('message1');
 var mesValue1 = 'You: ' + accessMsg1.value;
 
 
-var botHello = "Hello";
-var botGreetings = "How are you ?";
-var yesAnswerVar = "Cool";
-var noAnswerVar = "Not cool";
-var neitherNoOrYesVar = "I didn't understand, can you please try again"
+var botHello = ["Hello", "Hey mate", "Good morning user"];
+var randomBotHello = botHello[Math.floor(botHello.length * Math.random())];
+
+var botGreetings = "How do you feel today";
+
+var yesAnswerVar = ["Cool", "I am glad to here that", "You lucky user"];
+var randomYesAnswerVar = yesAnswerVar[Math.floor(yesAnswerVar.length * Math.random())];
+
+var noAnswerVar = ["Not cool", "I am sad to here that", "I hope you enjoy your time here !"];
+var randomNoAnswerVar = noAnswerVar[Math.floor(noAnswerVar.length * Math.random())];
+
+var neitherNoOrYesVar = "I didn't understand, can you please try again ?";
+
+var attemptsTry = 0;
+
+var agressiveAnswer = "Dude, are you sure you went to school ? You can't read.";
+
+var byeByeUser = "Good bye it has been fun !"
 
 function helloOnload() {
-    displayMsg1.innerHTML = displayMsg1.innerHTML + 'Bot: ' + botHello + "<br>";
+    displayMsg1.innerHTML = displayMsg1.innerHTML + 'Bot: ' + randomBotHello + "<br>";
 
 }
 helloOnload();
@@ -29,30 +42,40 @@ function handleForm(event) {
     event.preventDefault();
 }
 
-var attemptsTry = 0;
+
 
 form1.addEventListener('submit', handleForm);
 
 function sendMessage1() {
     displayMsg1.innerHTML = displayMsg1.innerHTML + 'You: ' + accessMsg1.value + "<br>";
     var userMessage = accessMsg1.value;
+
+    const ele = document.getElementById("message2")
+    ele.addEventListener("keydown", function(e){
+        const keycode = e.which || e.keyCode;
+        if (keyCode === 13 && !e.shiftKey) {
+            e.preventDefault();
+        }
+    })
     
     scrollToBottom('message1');
     form1.reset();
-        if (userMessage == "yes") {
-            setTimeout(function(){ displayMsg1.innerHTML = displayMsg1.innerHTML +"Bot: "+yesAnswerVar + "<br>"; }, 1000);
+        if (userMessage.includes("yes") == true) {
+            setTimeout(function(){ displayMsg1.innerHTML = displayMsg1.innerHTML +"Bot: "+randomYesAnswerVar + "<br>"; }, 1000);
         }
-        else if (userMessage == "no") {
-            setTimeout(function(){ displayMsg1.innerHTML = displayMsg1.innerHTML +"Bot: "+noAnswerVar + "<br>"; }, 1000);
+        else if (userMessage.includes("no") == true) {
+            setTimeout(function(){ displayMsg1.innerHTML = displayMsg1.innerHTML +"Bot: "+randomNoAnswerVar + "<br>"; }, 1000);
         }
         else {
             attemptsTry = attemptsTry + 1;
-            setTimeout(function(){ displayMsg1.innerHTML = displayMsg1.innerHTML +"Bot: "+neitherNoOrYesVar + "<br>"; }, 1000);
-            if(attemptsTry>=3) {
-                alert("fuck");
+            if (attemptsTry<3) {
+            setTimeout(function(){ displayMsg1.innerHTML = displayMsg1.innerHTML +"Bot: "+neitherNoOrYesVar + "<br>"; }, 1000)};
+            if(attemptsTry==3) {
+                setTimeout(function(){ displayMsg1.innerHTML = displayMsg1.innerHTML +"Bot: "+agressiveAnswer + "<br>"; }, 2000);
+                setTimeout(function(){ displayMsg1.innerHTML = displayMsg1.innerHTML +"Bot: "+byeByeUser + "<br>"; }, 4000)
+                document.getElementById("message2").disabled = true;
             }
         }
-        console.log(attemptsTry);
 }
 
 function scrollToBottom(id) {
