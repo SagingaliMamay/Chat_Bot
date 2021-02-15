@@ -3,24 +3,64 @@ body {
   padding: 0;
   text-align: center;
   background-color: #242323;
+  font-family: "Open Sans", sans-serif;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+#title h1 {
+  font-size: 3rem;
+  color: whitesmoke;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 }
 
 .sendBtn1 {
   margin-top: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sendBtn1 i {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sendBtn1 i:hover {
+  color: rgb(235, 235, 235);
+  text-shadow: 2px 0px 5px rgba(255, 255, 255, 1);
+  transform: translateY(-3px);
+  transition: 0.3s ease-in;
 }
 
 #message1 {
   background-color: whitesmoke;
-  border: solid 4px black;
+  border: solid 3px black;
   border-radius: 20px;
   margin-left: 50%;
   transform: translateX(-50%);
+  white-space: pre-wrap;
 }
 
 #message2 {
   background-color: whitesmoke;
-  border: solid 4px black;
+  border: solid 3px black;
   border-radius: 20px;
+  text-align: center;
+}
+
+#message2:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+  text-align: center;
+}
+
+#message2:focus::placeholder {
+  color: transparent;
 }
 
 @media screen and (max-width: 600px) {
@@ -28,7 +68,6 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 10%;
-    text-align: center;
   }
 
   #aside1 {
@@ -74,19 +113,29 @@ body {
 @media screen and (min-width: 601px) and (max-width: 700px) {
   article {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20% 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15% 1fr 1fr;
     text-align: center;
   }
 
   #aside1 {
     grid-column: 1 / 2;
-    grid-row: 2/3;
+    grid-row: 2 / 3;
   }
 
   #dialog_box1 {
-    grid-column: 2 / 3;
+    grid-column: 2 / 4;
     grid-row: 2/3;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px 20px 0 0;
+    margin-right: 20px;
+  }
+
+  #dialog_box2 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   #message1 {
@@ -95,8 +144,11 @@ body {
   }
 
   #dialog_box2 {
-    grid-column: 1 /3;
+    grid-column: 1 /4;
     grid-row: 3 / 4;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px 0 20px 20px;
+    margin: 0 20px;
   }
 
   #message2 {
@@ -112,7 +164,7 @@ body {
 @media screen and (min-width: 701px) {
   article {
     display: grid;
-    grid-template-columns: 10% 1fr 1fr 10%;
+    grid-template-columns: 10% 1fr 1fr 1fr 10%;
     grid-template-rows: 20% 1fr 1fr;
   }
 
@@ -125,8 +177,11 @@ body {
   }
 
   #dialog_box1 {
-    grid-column: 3 / 4;
+    grid-column: 3 / 5;
     grid-row: 2 / 3;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px 20px 0 0;
+    padding: 0 20px 20px 20px;
   }
 
   #message1 {
@@ -135,8 +190,11 @@ body {
   }
 
   #dialog_box2 {
-    grid-column: 3 / 4;
+    grid-column: 3 / 5;
     grid-row: 3 / 4;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0 0 20px 20px;
+    padding-bottom: 20px;
   }
 
   #message2 {
@@ -157,9 +215,10 @@ body {
   border-radius: 50%;
   background-color: rgb(90, 250, 90);
   position: absolute;
-  top: 5%;
+  top: 30px;
   left: 5%;
   z-index: -1;
+  overflow-x: hidden;
   animation-name: brillance;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -169,24 +228,8 @@ body {
 @keyframes brillance {
   0% {
     background-color: rgb(0, 255, 0);
-    box-shadow: 0px 0px 15px rgb(0, 255, 0);
+    box-shadow: 0px 0px 20px 25px rgb(0, 255, 0);
   }
-
-  25% {
-    background-color: rgb(67, 255, 67);
-    box-shadow: 0px 0px 10px 15px rgb(67, 255, 67);
-  }
-
-  50% {
-    background-color: rgb(123, 253, 123);
-    box-shadow: 0px 0px 10px 15px rgb(123, 253, 123);
-  }
-
-  75% {
-    background-color: rgb(166, 255, 166);
-    box-shadow: 0px 0px 10px 15px rgb(166, 255, 166);
-  }
-
   100% {
     background-color: rgb(206, 255, 206);
     box-shadow: 0px 0px 10px 15px rgb(206, 255, 206);
@@ -199,12 +242,13 @@ body {
   border-radius: 50%;
   background-color: rgb(241, 245, 6);
   position: absolute;
-  top: 15%;
-  left: 40%;
+  top: 120px;
+  left: 70%;
   z-index: -1;
+  overflow-x: hidden;
   animation-name: brillance2;
   animation-duration: 3s;
-  animation-delay: 1s;
+  animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -212,12 +256,12 @@ body {
 @keyframes brillance2 {
   0% {
     background-color: rgb(251, 255, 0);
-    box-shadow: 0px 0px 50px 30px rgb(251, 255, 0);
+    box-shadow: 0px 0px 10px 50px rgb(251, 255, 0);
   }
 
   100% {
     background-color: rgb(246, 247, 189);
-    box-shadow: 0px 0px 50px 30px rgb(246, 247, 189);
+    box-shadow: 0px 0px 10px 40px rgb(246, 247, 189);
   }
 }
 
@@ -227,12 +271,13 @@ body {
   border-radius: 50%;
   background-color: rgb(255, 19, 19);
   position: absolute;
-  top: 55%;
-  left: 35%;
+  top: 450px;
+  left: 30%;
   z-index: -1;
+  overflow-x: hidden;
   animation-name: brillance3;
   animation-duration: 4s;
-  animation-delay: 4s;
+  animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -240,7 +285,7 @@ body {
 @keyframes brillance3 {
   0% {
     background-color: rgb(253, 2, 2);
-    box-shadow: 0px 0px 50px 50px rgb(253, 2, 2);
+    box-shadow: 0px 0px 50px 70px rgb(253, 2, 2);
   }
 
   100% {
@@ -255,11 +300,12 @@ body {
   border-radius: 50%;
   background-color: rgb(125, 70, 255);
   position: absolute;
-  top: 75%;
-  left: 55%;
+  top: 550px;
+  left: 65%;
   z-index: -1;
+  overflow-x: hidden;
   animation-name: brillance4;
-  animation-duration: 6s;
+  animation-duration: 5s;
   animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -268,12 +314,12 @@ body {
 @keyframes brillance4 {
   0% {
     background-color: rgb(76, 0, 255);
-    box-shadow: 0px 0px 50px 20px rgb(76, 0, 255);
+    box-shadow: 0px 0px 20px 40px rgb(76, 0, 255);
   }
 
   100% {
     background-color: rgb(176, 143, 255);
-    box-shadow: 0px 0px 50px 20px rgb(176, 143, 255);
+    box-shadow: 0px 0px 20px 20px rgb(176, 143, 255);
   }
 }
 
@@ -286,9 +332,10 @@ body {
   top: 98%;
   left: 8%;
   z-index: -1;
+  overflow-x: hidden;
   animation-name: brillance5;
   animation-duration: 6s;
-  animation-delay: 3s;
+  animation-delay: 0s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
@@ -296,7 +343,7 @@ body {
 @keyframes brillance5 {
   0% {
     background-color: rgb(0, 174, 255);
-    box-shadow: 0px 0px 10px 20px rgb(0, 174, 255);
+    box-shadow: 0px 0px 10px 25px rgb(0, 174, 255);
   }
 
   100% {
@@ -304,31 +351,3 @@ body {
     box-shadow: 0px 0px 10px 20px rgb(129, 215, 255);
   }
 }
-
-/* .circle6 {
-  width: 15rem;
-  height: 15rem;
-  border-radius: 50%;
-  background-color: rgb(255, 6, 180);
-  position: absolute;
-  top: 120%;
-  left: 80%;
-  z-index: -1;
-  animation-name: brillance6;
-  animation-duration: 6s;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes brillance6 {
-  0% {
-    background-color: rgb(255, 6, 180);
-    box-shadow: 0px 0px 10px 10px rgb(255, 6, 180);
-  }
-
-  100% {
-    background-color: rgb(253, 163, 226);
-    box-shadow: 0px 0px 10px 10px rgb(253, 163, 226);
-  }
-} */
