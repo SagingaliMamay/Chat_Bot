@@ -34,10 +34,11 @@ body {
 }
 
 #message1 {
-  padding-left: 5px;
+  font-size: 1.5rem;
+  padding: 10px;
   background-color: whitesmoke;
   border: solid 3px black;
-  border-radius: 20px;
+  border-radius: 20px 0px 0px 20px;
   margin-left: 50%;
   transform: translateX(-50%);
   overflow-x: auto;
@@ -47,6 +48,7 @@ body {
 
 #message1::-webkit-scrollbar-track {
   border: 1px solid #000;
+  border-radius: 5px;
   padding: 1px 0;
   background-color: #1a0a0a46;
 }
@@ -62,13 +64,16 @@ body {
   border: 1px solid #000;
 }
 
+#dialog_box2 {
+  margin-bottom: 50px;
+}
+
 #message2 {
+  font-size: 1.2rem;
   background-color: whitesmoke;
   border: solid 3px black;
   border-radius: 20px;
   text-align: center;
-  overflow: scroll;
-  scroll-behavior: auto;
 }
 
 #message2:focus {
