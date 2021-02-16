@@ -73,23 +73,41 @@ function sendMessage1() {
   form1.reset();
   if (userMessage.includes("yes") == true) {
     setTimeout(function () {
+      for (let el of document.querySelectorAll(".gif")) el.style.display = "";
+    });
+    setTimeout(function () {
       displayMsg1.innerHTML =
         displayMsg1.innerHTML + "Bot: " + randomYesAnswerVar + "<br>";
+      for (let el of document.querySelectorAll(".gif"))
+        el.style.display = "none";
     }, 1000);
   } else if (userMessage.includes("no") == true) {
     setTimeout(function () {
+      for (let el of document.querySelectorAll(".gif")) el.style.display = "";
+    });
+    setTimeout(function () {
       displayMsg1.innerHTML =
         displayMsg1.innerHTML + "Bot: " + randomNoAnswerVar + "<br>";
+      for (let el of document.querySelectorAll(".gif"))
+        el.style.display = "none";
     }, 1000);
   } else {
     attemptsTry = attemptsTry + 1;
     if (attemptsTry < 3) {
       setTimeout(function () {
+        for (let el of document.querySelectorAll(".gif")) el.style.display = "";
+      });
+      setTimeout(function () {
         displayMsg1.innerHTML =
           displayMsg1.innerHTML + "Bot: " + neitherNoOrYesVar + "<br>";
+        for (let el of document.querySelectorAll(".gif"))
+          el.style.display = "none";
       }, 1000);
     }
     if (attemptsTry == 3) {
+      setTimeout(function () {
+        for (let el of document.querySelectorAll(".gif")) el.style.display = "";
+      });
       setTimeout(function () {
         displayMsg1.innerHTML =
           displayMsg1.innerHTML + "Bot: " + agressiveAnswer + "<br>";
@@ -97,10 +115,17 @@ function sendMessage1() {
           el.style.display = "";
         for (let el of document.querySelectorAll(".logo"))
           el.style.display = "none";
+        for (let el of document.querySelectorAll(".gif"))
+          el.style.display = "none";
       }, 2000);
+      setTimeout(function () {
+        for (let el of document.querySelectorAll(".gif")) el.style.display = "";
+      });
       setTimeout(function () {
         displayMsg1.innerHTML =
           displayMsg1.innerHTML + "Bot: " + byeByeUser + "<br>";
+        for (let el of document.querySelectorAll(".gif"))
+          el.style.display = "none";
       }, 4000);
       document.getElementById("message2").disabled = true;
     }
