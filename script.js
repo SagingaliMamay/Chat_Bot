@@ -31,6 +31,10 @@ var agressiveAnswer = "Dude, are you sure you went to school ? You can't read.";
 
 var byeByeUser = "Good bye it has been fun !";
 
+for (let el of document.querySelectorAll(".logo1")) el.style.display = "none";
+
+for (let el of document.querySelectorAll(".gif")) el.style.display = "none";
+
 function helloOnload() {
   displayMsg1.innerHTML =
     displayMsg1.innerHTML + "Bot: " + randomBotHello + "<br>";
@@ -89,6 +93,10 @@ function sendMessage1() {
       setTimeout(function () {
         displayMsg1.innerHTML =
           displayMsg1.innerHTML + "Bot: " + agressiveAnswer + "<br>";
+        for (let el of document.querySelectorAll(".logo1"))
+          el.style.display = "";
+        for (let el of document.querySelectorAll(".logo"))
+          el.style.display = "none";
       }, 2000);
       setTimeout(function () {
         displayMsg1.innerHTML =
