@@ -18,10 +18,6 @@ var randomYesAnswerVar = yesAnswerVar[Math.floor(yesAnswerVar.length * Math.rand
 var noAnswerVar = ["Not cool", "I am sad to here that", "I hope you enjoy your time here !"];
 var randomNoAnswerVar = noAnswerVar[Math.floor(noAnswerVar.length * Math.random())];
 
-function random(a) {
-    a[Math.floor(a.length * Math.random())];
-}
-
 var neitherNoOrYesVar = "I didn't understand, can you please try again ?";
 
 var attemptsTry = 0;
@@ -53,6 +49,14 @@ form1.addEventListener('submit', handleForm);
 function sendMessage1() {
     displayMsg1.innerHTML = displayMsg1.innerHTML + 'You: ' + accessMsg1.value + "<br>";
     var userMessage = accessMsg1.value;
+
+    const ele = document.getElementById("message2")
+    ele.addEventListener("keydown", function(e){
+        const keycode = e.which || e.keyCode;
+        if (keyCode === 13 && !e.shiftKey) {
+            e.preventDefault();
+        }
+    })
     
     scrollToBottom('message1');
     form1.reset();
