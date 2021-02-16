@@ -12,6 +12,7 @@ var randomBotHello = botHello[Math.floor(botHello.length * Math.random())];
 var botGreetings = "How do you feel today";
 
 var yesAnswerVar = ["Cool", "I am glad to hear that", "You lucky user"];
+
 var randomYesAnswerVar =
   yesAnswerVar[Math.floor(yesAnswerVar.length * Math.random())];
 
