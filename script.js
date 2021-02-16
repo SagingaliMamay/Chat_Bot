@@ -32,11 +32,7 @@ var agressiveAnswer = "Dude, are you sure you went to school ? You can't read.";
 
 var byeByeUser = "Good bye it has been fun !";
 
-<<<<<<< HEAD
 for (let el of document.querySelectorAll("#logo1")) el.style.display = "none";
-=======
-for (let el of document.querySelectorAll(".logo1")) el.style.display = "none";
->>>>>>> 613e4bf0be32fa65a6518eabeb3621917ee7026a
 
 for (let el of document.querySelectorAll(".gif")) el.style.display = "none";
 
@@ -129,11 +125,6 @@ function sendMessage1() {
       setTimeout(function () {
         displayMsg1.innerHTML =
           displayMsg1.innerHTML + "Bot: " + byeByeUser + "<br>";
-<<<<<<< HEAD
-=======
-        for (let el of document.querySelectorAll(".gif"))
-          el.style.display = "none";
->>>>>>> 613e4bf0be32fa65a6518eabeb3621917ee7026a
       }, 4000);
       document.getElementById("message2").disabled = true;
       for (let el of document.querySelectorAll(".gif"))
