@@ -12,35 +12,32 @@
     <title>Chat_Bot</title>
   </head>
 
-  <!-- body ---------------------------->
+  <!-- body -->
   <body>
-    <!-- titre---------------------------->
-    <header>
-      <section id="title">
-        <h1>Chat Bot</h1>
-      </section>
+    <!-- titre -->
+    <header id="title">
+      <h1>Chat Bot</h1>
     </header>
-    <!-- titre ---------------------------->
+    <!-- titre -->
 
-    <!-- Main content ---------------------------->
-    <article>
-      <!-- logo ------------->
+    <!-- Main content -->
+    <section id="main_content">
+      <h4>Main section</h4>
+      <!-- logo -->
       <aside id="aside1">
-        <section id="robot">
-          <img src="photos/logo-robot.png" alt="un logo robot" class="logo" />
-        </section>
+        <img src="photos/logo-robot.png" alt="un logo robot" class="logo" />
       </aside>
-      <!-- logo ------------->
+      <!-- logo -->
 
-      <!-- box dialog 1 ------------->
-      <section id="dialog_box1">
+      <!-- box dialog 1 -->
+      <article id="dialog_box1">
         <h2>Chat zone</h2>
-        <article type="text" id="message1" class="message1"></article>
-      </section>
-      <!-- box dialog 1 ------------->
+        <div id="message1" class="message1"></div>
+      </article>
+      <!-- box dialog 1 -->
 
-      <!-- box dialog 2 ------------->
-      <section id="dialog_box2">
+      <!-- box dialog 2 -->
+      <article id="dialog_box2">
         <h2>type your text</h2>
         <form onsubmit="sendMessage1()" id="chatForm2">
           <input
@@ -49,15 +46,16 @@
             id="message2"
             class="message2"
             placeholder="type here to speak with me!"
+            autocomplete="off"
           />
           <button class="sendBtn1" type="submit">
             <i class="fa fa-send-o"></i>
           </button>
         </form>
-      </section>
-      <!-- box dialog 2 ------------->
-    </article>
-    <!-- Main content ---------------------------->
+      </article>
+      <!-- box dialog 2 -->
+    </section>
+    <!-- Main content -->
     <aside>
       <div class="circle1"></div>
       <div class="circle2"></div>
@@ -65,9 +63,9 @@
       <div class="circle4"></div>
       <div class="circle5"></div>
     </aside>
-    <!-- Script js ---------------->
+    <!-- Script js -->
     <script src="script.js"></script>
-    <!-- Script js ---------------->
+    <!-- Script js -->
   </body>
-  <!-- body ---------------------------->
+  <!-- body -->
 </html>
