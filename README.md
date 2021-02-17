@@ -35,8 +35,14 @@ We have started this project 15.02.2021 and finish date is 17.02.2021
 
 We have used:
 Figma for creation UX Prototype.
+
+
 JavaScript,HTML,CSS
+
+
 Responsive Web Design
+
+
 Mobile First approach
 
 # Who 
