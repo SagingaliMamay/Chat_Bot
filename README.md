@@ -9,8 +9,13 @@
 
 # What
 You can see below our UX prototype:
-![UX Prototype](Images/chat.png)
 
+# Mobile
+![UX Prototype](photos/chat_bot.png)
+ 
+ # Desktop
+
+![UX Prototype](photos/chat_bot2.png)
 
 
 # Why
@@ -63,4 +68,9 @@ Our Project Team is :
 
 ***If you have any questions about our project,please contact us on GitHub. Thanks!!!
 
+# Copyright 
 
+[Chat_bot Logo](logomakr.com/2cjS3W)
+
+
+[Chat_bot Logo](logomakr.com/4N0Srp)
