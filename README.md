@@ -15,15 +15,21 @@ You can see below our UX prototype:
 With chatbots, hitting potential customers is easy by offering required information irrespective of the day or time. Bots are less prone to errors, hence, the better customer experience can help to establish a better brand.
 
 # When
-We have started this project 15.02.2021
+We have started this project 15.02.2021 
+
 
 1st Step: Task analysis and distrubutions of functions for each member of team.
 
+
 2nd step: Debuging procces
+
 
 3th step: Checking test W3C and Lighthhouse test
 
+
 4th step: Publishing on GitHub
+
+
 
 # How
 
