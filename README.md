@@ -1,7 +1,7 @@
 # Chat_Bot HEAD
-https://sagingalimamay.github.io/Chat_Bot/
-=======
- [GitHub link](https://sagingalimamay.github.io/Chat_Bot/. )
+
+
+
  
 ### We are happy to present you our chat bot
 .[Our chat bot](https://sagingalimamay.github.io/Chat_Bot/. )
