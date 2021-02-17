@@ -155,7 +155,6 @@ h4 {
   border: none;
   cursor: pointer;
 }
-
 .sendBtn1 i {
   font-size: 2rem;
   color: rgba(255, 255, 255, 0.8);
@@ -395,7 +394,6 @@ h4 {
   z-index: -1;
   top: 450px;
   left: 30%;
-  overflow-x: hidden;
   animation-name: brillance3;
   animation-duration: 2s;
   animation-delay: 0s;

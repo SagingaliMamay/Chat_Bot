@@ -29,8 +29,6 @@ var questionBot = ["Is it cold or hot outside ?", "You are my favorite user"];
 var randomQuestionBot =
   questionBot[Math.floor(questionBot.length * Math.random())];
 
-console.log(randomQuestionBot);
-
 var botAnswerUserCold = "Don't forget your coat today";
 var botAnswerUserHot = "Sunbathing all day today";
 
