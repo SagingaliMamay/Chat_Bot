@@ -57,13 +57,13 @@ function sendMessage1() {
     displayMsg1.innerHTML + "You: " + accessMsg1.value + "<br>";
   var userMessage = accessMsg1.value;
 
-  const ele = document.getElementById("message2");
+  /*const ele = document.getElementById("message2");
   ele.addEventListener("keydown", function (e) {
     const keycode = e.which || e.keyCode;
     if (keyCode === 13 && !e.shiftKey) {
       e.preventDefault();
     }
-  });
+  });*/
 
   scrollToBottom("message1");
   form1.reset();
@@ -103,3 +103,19 @@ function scrollToBottom(id) {
   var div = document.getElementById(id);
   div.scrollTop = div.scrollHeight - div.clientHeight;
 }
+
+const ele = document.getElementById('message2');
+
+ele.addEventListener('keydown', function(e) {
+    // Get the code of pressed key
+    const keyCode = e.which || e.keyCode;
+
+    // 13 represents the Enter key
+    if (keyCode === 13 && !e.shiftKey) {
+        // Don't generate a new line
+        e.preventDefault();
+
+        // Do something else such as send the message to back-end
+        // ...
+    }
+});
