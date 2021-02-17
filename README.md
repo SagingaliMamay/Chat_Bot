@@ -9,7 +9,7 @@
 
 # What
 You can see below our UX prototype:
-![UX Prototype](chat.png)
+![UX Prototype](Images/chat.png)
 
 
 
