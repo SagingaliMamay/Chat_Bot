@@ -9,7 +9,7 @@
 
 # What
 You can see below our UX prototype:
-![UX Prototype](.home/saga/Images/chat.png)
+![UX Prototype](chat.png)
 
 
 
