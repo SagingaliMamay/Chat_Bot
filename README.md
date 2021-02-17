@@ -42,6 +42,8 @@ We have started this project 15.02.2021 and finish date is 17.02.2021
 # How
 
 We have used:
+
+
 Figma for creation UX Prototype.
 
 
