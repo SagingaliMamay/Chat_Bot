@@ -52,10 +52,12 @@ Our Project Team is :
 *Frontend Developer-Simon Aerts (@SimonAertsBecode ).
 
 
-*Backend Developer-Alexandre Garçao(@alexg-rgb).
+*Backend Developer-Alexandre Garçao (@alexg-rgb).
 
 
-*Project Manager-Sagingali Mamay(@SagingaliMamay).
+*Project Manager-Sagingali Mamay (@SagingaliMamay).
 
+
+***If you have any questions about out project,please contact us on GitHub. Thanks!!!
 
 
