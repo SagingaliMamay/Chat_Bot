@@ -16,6 +16,18 @@ var randomYesAnswerVar = yesAnswerVar[Math.floor(yesAnswerVar.length * Math.rand
 
 var noAnswerVar = ["Not cool", "I am sad to here that", "I hope you enjoy your time here !"];
 var randomNoAnswerVar = noAnswerVar[Math.floor(noAnswerVar.length * Math.random())];
+var yesAnswerVar = ["Cool", "I am glad to hear that", "You lucky user"];
+
+var randomYesAnswerVar =
+  yesAnswerVar[Math.floor(yesAnswerVar.length * Math.random())];
+
+var noAnswerVar = [
+  "Not cool",
+  "I am sad to hear that",
+  "I hope you enjoy your time here !",
+];
+var randomNoAnswerVar =
+  noAnswerVar[Math.floor(noAnswerVar.length * Math.random())];
 
 var neitherNoOrYesVar = "I didn't understand, can you please try again ?";
 
@@ -33,6 +45,10 @@ var attemptsTry = 0;
 var agressiveAnswer = "Dude, are you sure you went to school ? You can't read.";
 
 var byeByeUser = "Good bye it has been fun !";
+
+for (let el of document.querySelectorAll("#logo1")) el.style.display = "none";
+
+for (let el of document.querySelectorAll(".gif")) el.style.display = "none";
 
 function helloOnload() {
   displayMsg1.innerHTML =
@@ -106,6 +122,18 @@ function sendMessage1() {
       displayMsg1.innerHTML =
         displayMsg1.innerHTML + "Bot: " + botThanks + "<br>";scrollToBottom("message1")
     }, 2000);
+      for (let el of document.querySelectorAll(".gif")) el.style.display = "";
+    });
+    setTimeout(function () {
+      displayMsg1.innerHTML =
+        displayMsg1.innerHTML + "Bot: " + randomYesAnswerVar + "<br>";
+      for (let el of document.querySelectorAll(".gif"))
+        el.style.display = "none";
+    }, 1000);
+  } else if (userMessage.includes("no") == true) {
+    setTimeout(function () {
+      for (let el of document.querySelectorAll(".gif")) el.style.display = "";
+    });
     setTimeout(function () {
       displayMsg1.innerHTML =
         displayMsg1.innerHTML + "Bot: " + botAnswerUserCold + "<br>";scrollToBottom("message1")
@@ -127,25 +155,54 @@ function sendMessage1() {
       displayMsg1.innerHTML =
         displayMsg1.innerHTML + "Bot: " + passwordBot + "<br>";scrollToBottom("message1")
     }, 5000);
+        displayMsg1.innerHTML + "Bot: " + randomNoAnswerVar + "<br>";
+      for (let el of document.querySelectorAll(".gif"))
+        el.style.display = "none";
+    }, 1000);
   } else {
     attemptsTry = attemptsTry + 1;
     if (attemptsTry < 3) {
       setTimeout(function () {
+        for (let el of document.querySelectorAll(".gif")) el.style.display = "";
+      });
+      setTimeout(function () {
         displayMsg1.innerHTML =
           displayMsg1.innerHTML + "Bot: " + neitherNoOrYesVar + "<br>";scrollToBottom("message1")
+          displayMsg1.innerHTML + "Bot: " + neitherNoOrYesVar + "<br>";
+        for (let el of document.querySelectorAll(".gif"))
+          el.style.display = "none";
       }, 1000);
 
     } if (attemptsTry == 3) {
       setTimeout(function () {
+        for (let el of document.querySelectorAll(".gif")) el.style.display = "";
+      });
+      setTimeout(function () {
         displayMsg1.innerHTML =
           displayMsg1.innerHTML + "Bot: " + agressiveAnswer + "<br>";scrollToBottom("message1")
+          displayMsg1.innerHTML + "Bot: " + agressiveAnswer + "<br>";
+        for (let el of document.querySelectorAll("#logo1"))
+          el.style.display = "";
+        for (let el of document.querySelectorAll("#logo"))
+          el.style.display = "none";
+        for (let el of document.querySelectorAll(".gif"))
+          el.style.display = "none";
       }, 2000);
+      setTimeout(function () {
+        for (let el of document.querySelectorAll(".gif")) el.style.display = "";
+      });
       setTimeout(function () {
         displayMsg1.innerHTML =
           displayMsg1.innerHTML + "Bot: " + byeByeUser + "<br>";scrollToBottom("message1")
       }, 4000);
 
       document.getElementById("message2").disabled = true;
+      for (let el of document.querySelectorAll(".gif"))
+        el.style.display = "none";
+      document.getElementsByName("message2")[0].placeholder =
+        "No more typing for you!";
+      document.getElementById("message2").style.backgroundColor =
+        "rgba(133,133,132,0.8)";
     }
   }
 }
