@@ -8,7 +8,7 @@
 
 
 # What
-You can see below our UX prototype: ![chat_bot](./home/saga/Images/chat.png)
+You can see below our UX prototype: ![chat_bot](.home/saga/Images/chat.png)
 
 # Why
 
