@@ -58,6 +58,6 @@ Our Project Team is :
 *Project Manager-Sagingali Mamay (@SagingaliMamay).
 
 
-***If you have any questions about out project,please contact us on GitHub. Thanks!!!
+***If you have any questions about our project,please contact us on GitHub. Thanks!!!
 
 
