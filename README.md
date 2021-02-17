@@ -47,8 +47,14 @@ Mobile First approach
 
 # Who 
 Our Project Team is :
+
+
 *Frontend Developer-Simon Aerts (@SimonAertsBecode ).
+
+
 *Backend Developer-Alexandre Garçao(@alexg-rgb).
+
+
 *Project Manager-Sagingali Mamay(@SagingaliMamay).
 
 
