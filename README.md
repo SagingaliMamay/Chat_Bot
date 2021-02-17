@@ -8,7 +8,8 @@
 
 
 # What
-You can see below our UX prototype: ![UX Prototype](home/saga/Images/chat.png)
+You can see below our UX prototype:
+![UX Prototype](.home/saga/Images/chat.png)
 
 
 
