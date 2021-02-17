@@ -7,14 +7,14 @@ https://sagingalimamay.github.io/Chat_Bot/
 .[Our chat bot](https://sagingalimamay.github.io/Chat_Bot/. )
 
 
-#What
+# What
 You can see below our UX prototype:
 
-#Why
+# Why
 
 With chatbots, hitting potential customers is easy by offering required information irrespective of the day or time. Bots are less prone to errors, hence, the better customer experience can help to establish a better brand.
 
-#When
+# When
 We have started this project 15.02.2021
 
 1st Step: Task analysis and distrubutions of functions for each member of team.
@@ -25,7 +25,7 @@ We have started this project 15.02.2021
 
 4th step: Publishing on GitHub
 
-#How
+# How
 
 We have used:
 Figma for creation UX Prototype.
